@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>[object Object]</title>
-      <link href="/2020/02/02/hello/"/>
-      <url>/2020/02/02/hello/</url>
-      
-        <content type="html"><![CDATA[<h2 id="稳健"><a href="#稳健" class="headerlink" title="稳健"></a>稳健</h2><pre><code>print(&quot;稳健&quot;)</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> webx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>test</title>
       <link href="/2020/02/01/test/"/>
       <url>/2020/02/01/test/</url>
