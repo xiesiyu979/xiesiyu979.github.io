@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>categoriestest</title>
+      <link href="/2020/02/02/categoriestest/"/>
+      <url>/2020/02/02/categoriestest/</url>
+      
+        <content type="html"><![CDATA[<pre><code>print(&quot;这是一个分类测试文件&quot;)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分类 </category>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分类 </tag>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tagstest</title>
+      <link href="/2020/02/02/tagstest/"/>
+      <url>/2020/02/02/tagstest/</url>
+      
+        <content type="html"><![CDATA[<pre><code>print(&quot;这是一个标签测试文件&quot;)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+            <tag> 标签 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test</title>
       <link href="/2020/02/01/test/"/>
       <url>/2020/02/01/test/</url>
