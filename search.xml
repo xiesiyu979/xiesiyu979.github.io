@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>全连接神经网络实现线性回归(Tensorflow)</title>
+      <link href="/2020/04/02/nnLinerRegression/"/>
+      <url>/2020/04/02/nnLinerRegression/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tfimport numpy as npimport matplotlib.pyplot as plt#随机生成一系列数据x_data=np.linspace(-0.5,0.5,100)[:,np.newaxis]y_data=x_data**2+np.random.normal(0, 0.02, x_data.shape)x=tf.placeholder(tf.float32,[None,1])y=tf.placeholder(tf.float32,[None,1])#定义两层神经网络w1=tf.Variable(tf.random.normal([1,10]))b1=tf.Variable(tf.ones([1,10]))wx1=tf.matmul(x,w1)+b1act1=tf.nn.tanh(wx1)w2=tf.Variable(tf.random.normal([10,1]))b2=tf.Variable(tf.ones([1,1]))wx2=tf.matmul(act1,w2)+b2pred=tf.nn.tanh(wx2)#定义损失loss=tf.reduce_mean(tf.square(y-pred))#梯度下降优化optimizer=tf.train.GradientDescentOptimizer(0.1)train=optimizer.minimize(loss)init=tf.global_variables_initializer()with tf.Session() as sess:    #训练1000次    sess.run(init)    for step in range(1000):        sess.run(train,feed_dict={x:x_data,y:y_data})        print(&quot;第%d次：&quot;%step)    y_pred=sess.run(pred,feed_dict={x:x_data})    plt.figure(figsize=(10,6))    plt.scatter(x_data,y_data)    plt.plot(x_data,y_pred,color=&quot;red&quot;,linewidth=2)    plt.show()</code></pre><p><img src="https://s1.ax1x.com/2020/04/02/GtpQRP.png" alt="GtpQRP.png"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LinerRegression</title>
       <link href="/2020/04/02/LinerRegression/"/>
       <url>/2020/04/02/LinerRegression/</url>
@@ -22,9 +35,9 @@
       
         <tags>
             
-            <tag> 机器学习 </tag>
-            
             <tag> 深度学习 </tag>
+            
+            <tag> 机器学习 </tag>
             
         </tags>
       
