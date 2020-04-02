@@ -4,13 +4,58 @@
   
     
     <entry>
+      <title>LinerRegression</title>
+      <link href="/2020/04/02/LinerRegression/"/>
+      <url>/2020/04/02/LinerRegression/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tfimport numpy as npimport matplotlib.pyplot as pltx_data=[]y_data=[]#随机生成测试数据for i in range(100):    x=np.random.normal(0.0,0.55)    y=x*0.3+0.2+np.random.normal(0.0,0.03)    x_data.append(x)    y_data.append(y)plt.scatter(x_data,y_data,color=&apos;b&apos;,label=&quot;数据&quot;)plt.xlabel(&quot;time&quot;)plt.ylabel(&quot;score&quot;)plt.show()</code></pre><p><img src="https://s1.ax1x.com/2020/04/02/GJtWuT.png" alt="GJtWuT.png">  </p><pre><code>#初始化权重参数值weights=tf.Variable(tf.random.uniform([1],-1.0,1.0))bais=tf.Variable(tf.zeros([1]))y=weights*x_data+bais#定义损失loss=tf.reduce_mean(tf.square(y-y_data))#梯度下降优化optimizer=tf.train.GradientDescentOptimizer(0.25)train=optimizer.minimize(loss)init=tf.initialize_all_variables()sess=tf.Session()sess.run(init)#训练100次for step in range(100):    sess.run(train)    print(step,sess.run(weights),sess.run(bais))#绘制拟合的直线y_pred=w*x_data+bplt.figure(figsize=(10,6))plt.scatter(x_data,y_data)plt.plot(x_data,y_pred,color=&quot;red&quot;,linewidth=2)plt.show()</code></pre><p><img src="https://s1.ax1x.com/2020/04/02/GJtgg0.png" alt="GJtgg0.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RNN循环神经网络</title>
-      <link href="/2020/03/07/RNN%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-      <url>/2020/03/07/RNN%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+      <link href="/2020/03/08/RNN%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+      <url>/2020/03/08/RNN%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<pre><code>#初始化参数import numpy as npx=[0.8,0.1]init_data=[0.3,0.6]W=np.asarray([[0.2,0.4],[0.7,0.3]])U=np.asarray([0.8,0.1])b_h=np.asarray([0.2,0.1])V=np.asarray([0.5,0.5])b_o=0.1#进行两次循环for i in range(len(x)):    before_activate=(np.dot(init_data,W)+x[i]*U)+b_h    state=np.tanh(before_activate)    init_data=state    output=np.dot(state,V)+b_o    print(&quot;t%s时刻状态值:%s,输出值:%s&quot;%(i+1,state,output))</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 人工智能 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -149,9 +194,9 @@
             
             <tag> 深度学习 </tag>
             
-            <tag> 神经网络 </tag>
-            
             <tag> 人工智能 </tag>
+            
+            <tag> 神经网络 </tag>
             
         </tags>
       
